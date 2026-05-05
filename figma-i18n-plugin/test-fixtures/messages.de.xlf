@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" target-language="de" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="promo.hero.title">
+        <source>Welcome</source>
+        <target>Willkommen</target>
+      </trans-unit>
+      <trans-unit id="promo.hero.subtitle">
+        <source>Best offers this week</source>
+        <target>Beste Angebote dieser Woche</target>
+      </trans-unit>
+      <trans-unit id="nav.home">
+        <source>Home</source>
+        <target>Startseite</target>
+      </trans-unit>
+      <trans-unit id="nav.search">
+        <source>Search</source>
+        <target>Suchen</target>
+      </trans-unit>
+      <trans-unit id="nav.profile">
+        <source>My Profile</source>
+        <target>Mein Profil</target>
+      </trans-unit>
+      <trans-unit id="listing.price.label">
+        <source>Price per month</source>
+        <target>Preis pro Monat</target>
+      </trans-unit>
+      <trans-unit id="listing.apply.button">
+        <source>Apply Now</source>
+        <target>Jetzt bewerben</target>
+      </trans-unit>
+      <trans-unit id="footer.copyright">
+        <source>All rights reserved</source>
+        <target>Alle Rechte vorbehalten</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

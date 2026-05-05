@@ -1,0 +1,21 @@
+{
+  "name": "figma-i18n-xliff-plugin",
+  "version": "1.0.0",
+  "description": "Figma plugin to localize text layers using Angular i18n XLIFF/XLF files",
+  "scripts": {
+    "build": "npm run build:main && npm run build:ui",
+    "build:main": "esbuild src/code.ts --bundle --outfile=dist/code.js --target=es2017 --format=cjs",
+    "build:ui": "esbuild src/ui/index.tsx --bundle --outfile=dist/ui.js --target=es2017 --format=iife --loader:.tsx=tsx && node scripts/build-ui-html.js",
+    "watch": "concurrently \"npm run watch:main\" \"npm run watch:ui\"",
+    "watch:main": "esbuild src/code.ts --bundle --outfile=dist/code.js --target=es2017 --format=cjs --watch",
+    "watch:ui": "esbuild src/ui/index.tsx --bundle --outfile=dist/ui.js --target=es2017 --format=iife --loader:.tsx=tsx --watch",
+    "test": "node --experimental-vm-modules node_modules/.bin/jest --passWithNoTests"
+  },
+  "devDependencies": {
+    "@figma/plugin-typings": "^1.100.0",
+    "concurrently": "^9.1.2",
+    "esbuild": "^0.24.2",
+    "typescript": "^5.7.0"
+  },
+  "dependencies": {}
+}

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0" srcLang="en" trgLang="fr">
+  <file id="ng2.template">
+    <unit id="promo.hero.title">
+      <segment>
+        <source>Welcome</source>
+        <target>Bienvenue</target>
+      </segment>
+    </unit>
+    <unit id="promo.hero.subtitle">
+      <segment>
+        <source>Best offers this week</source>
+        <target>Meilleures offres de la semaine</target>
+      </segment>
+    </unit>
+    <unit id="nav.home">
+      <segment>
+        <source>Home</source>
+        <target>Accueil</target>
+      </segment>
+    </unit>
+    <unit id="nav.search">
+      <segment>
+        <source>Search</source>
+        <target>Rechercher</target>
+      </segment>
+    </unit>
+  </file>
+</xliff>

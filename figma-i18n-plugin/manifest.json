@@ -1,0 +1,10 @@
+{
+  "name": "i18n XLIFF Localizer",
+  "id": "figma-i18n-xliff-localizer",
+  "api": "1.0.0",
+  "main": "dist/code.js",
+  "ui": "dist/ui.html",
+  "capabilities": [],
+  "enableProposedApi": false,
+  "editorType": ["figma"]
+}
