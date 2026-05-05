@@ -1,6 +1,30 @@
-# i18n XLIFF Localizer — Figma Plugin
+# i18n XLIFF Localizer — Figma Plugin + npm Library
 
-A Figma plugin that localizes text layers using i18n XLIFF/XLF files.
+A Figma plugin that localizes text layers using XLIFF/XLF files (Angular i18n friendly), plus a small npm library you can reuse for parsing/merging XLIFF into translation stores.
+
+## Install (library)
+
+```bash
+npm install figma-i18n-xliff-plugin
+```
+
+## Library usage
+
+```ts
+import { parseXliff, mergeIntoStores } from 'figma-i18n-xliff-plugin';
+
+const idStore = {};
+const sourceStore = {};
+
+const parsed = parseXliff(xmlString);
+mergeIntoStores(idStore, sourceStore, parsed);
+```
+
+Exports:
+
+- `parseXliff(xml)` / `detectLanguage(xml)` (Node + browser)
+- `mergeIntoStores(idStore, sourceStore, parsed, langOverride?)`
+- `normalizeText(text)`
 
 ## How It Works
 
@@ -52,7 +76,6 @@ figma-i18n-plugin/
 ## Setup & Build
 
 ```bash
-cd figma-i18n-plugin
 npm install
 npm run build
 ```

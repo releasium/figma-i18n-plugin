@@ -1,0 +1,66 @@
+{
+  "name": "figma-i18n-xliff-plugin",
+  "version": "1.0.0",
+  "description": "Figma plugin + npm library to localize text layers using XLIFF/XLF translation files",
+  "license": "MIT",
+  "homepage": "https://github.com/kostiantyn/figma-i18n-plugin#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kostiantyn/figma-i18n-plugin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kostiantyn/figma-i18n-plugin/issues"
+  },
+  "keywords": [
+    "figma",
+    "figma-plugin",
+    "i18n",
+    "l10n",
+    "localization",
+    "translation",
+    "xliff",
+    "xlf",
+    "plugin",
+    "angular"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "dist/",
+    "manifest.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "main": "./dist/lib/index.cjs",
+  "types": "./dist/lib/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/lib/index.d.ts",
+      "require": "./dist/lib/index.cjs",
+      "default": "./dist/lib/index.cjs"
+    }
+  },
+  "scripts": {
+    "build": "npm run build:plugin && npm run build:lib",
+    "build:plugin": "npm run build:main && npm run build:ui",
+    "build:main": "esbuild src/code.ts --bundle --outfile=dist/code.js --target=es2017 --format=cjs",
+    "build:ui": "esbuild src/ui/index.tsx --bundle --outfile=dist/ui.js --target=es2017 --format=iife --loader:.tsx=tsx && node scripts/build-ui-html.js",
+    "build:lib": "esbuild src/lib/index.ts --bundle --outfile=dist/lib/index.cjs --platform=node --format=cjs --target=es2019 && tsc -p tsconfig.lib.json",
+    "watch": "concurrently \"npm run watch:main\" \"npm run watch:ui\"",
+    "watch:main": "esbuild src/code.ts --bundle --outfile=dist/code.js --target=es2017 --format=cjs --watch",
+    "watch:ui": "esbuild src/ui/index.tsx --bundle --outfile=dist/ui.js --target=es2017 --format=iife --loader:.tsx=tsx --watch",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "prepublishOnly": "npm run build:lib",
+    "test": "node --experimental-vm-modules node_modules/.bin/jest --passWithNoTests"
+  },
+  "devDependencies": {
+    "@figma/plugin-typings": "^1.100.0",
+    "concurrently": "^9.1.2",
+    "esbuild": "^0.24.2",
+    "typescript": "^5.7.0"
+  },
+  "dependencies": {
+    "fast-xml-parser": "^4.5.3"
+  }
+}
