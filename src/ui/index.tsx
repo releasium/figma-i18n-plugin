@@ -51,7 +51,7 @@ function clearMessages(): void {
 function renderApp(): void {
   var app = $('app');
   app.innerHTML =
-    '<h1>i18n XLIFF Localizer</h1>' +
+    '<h1>Releasium - i18n XLIFF Localizer</h1>' +
 
     '<section class="section">' +
       '<h2>1. Load Translation Files</h2>' +
