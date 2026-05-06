@@ -52,12 +52,13 @@
     "watch:ui": "esbuild src/ui/index.tsx --bundle --outfile=dist/ui.js --target=es2017 --format=iife --loader:.tsx=tsx --watch",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "prepublishOnly": "npm run build:lib",
-    "test": "node --experimental-vm-modules node_modules/.bin/jest --passWithNoTests"
+    "test": "jest --passWithNoTests"
   },
   "devDependencies": {
     "@figma/plugin-typings": "^1.100.0",
     "concurrently": "^9.1.2",
     "esbuild": "^0.24.2",
+    "jest": "^30.0.5",
     "typescript": "^5.7.0"
   },
   "dependencies": {
